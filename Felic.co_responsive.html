@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felic.co | Official Fashion Brand</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+<style>
+/* Styling Umum */
+/* body { */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    scroll-behavior: smooth;
+}
+
+.tracking-wide {
+    letter-spacing: 2px;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: #212529;
+    border: none;
+    opacity: 1;
+}
+
+/* Header & Navigasi */
+.navbar-nav .nav-link {
+    color: #555555;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000000;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hero-section img {
+    max-height: 480px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Kartu Produk */
+.product-card {
+    transition: transform 0.3s ease, shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-card img {
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Kartu Testimoni */
+.testimonial-card {
+    border-left: 4px solid #212529 !important;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #212529;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Footer */
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* ===== Responsive improvements ===== */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    min-height: 64px;
+}
+.navbar-brand {
+    white-space: nowrap;
+    font-size: 1.1rem;
+}
+.navbar .container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.navbar-nav .nav-link {
+    margin-left: 0;
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+.hero-section {
+    padding-top: 96px;
+    padding-bottom: 48px;
+}
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+}
+.hero-section .lead {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+.hero-section .btn {
+    white-space: normal;
+}
+.hero-section img {
+    max-width: 100%;
+    height: auto;
+}
+.product-card img {
+    width: 100%;
+    max-width: 100%;
+}
+.card-body {
+    min-width: 0;
+}
+.card-text, p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: anywhere;
+}
+#kontak li span, #kontak li a {
+    overflow-wrap: anywhere;
+}
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        margin-top: .5rem;
+        padding: .5rem 0 .75rem;
+        background: #fff;
+        border-top: 1px solid #eee;
+    }
+    .navbar-nav .nav-link {
+        padding: .65rem .25rem;
+    }
+    .hero-section {
+        text-align: center;
+    }
+    .hero-section .btn {
+        display: inline-block;
+        margin: .25rem 0 !important;
+    }
+    .hero-section .col-lg-6:last-child {
+        margin-top: 1.5rem !important;
+    }
+}
+@media (max-width: 575.98px) {
+    .container {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .navbar-brand {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+    .navbar-toggler {
+        padding: .3rem .5rem;
+    }
+    .hero-section {
+        min-height: auto;
+        padding-top: 88px;
+        padding-bottom: 40px;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-section .btn {
+        width: 100%;
+        margin-right: 0 !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .hero-section img {
+        width: 100% !important;
+        max-height: 420px;
+    }
+    section.py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .product-card img {
+        height: 280px;
+    }
+    .d-flex.justify-content-between.align-items-center.mt-3 {
+        gap: .75rem;
+        flex-wrap: wrap;
+    }
+    .d-flex.justify-content-between.align-items-center.mt-3 .btn {
+        width: 100%;
+    }
+    .fs-5 {
+        font-size: 1.05rem !important;
+    }
+    #kontak .d-flex.align-items-center {
+        align-items: flex-start !important;
+    }
+}
+</style>
+
+</head>
+<body>
+
+    <!-- A. Header & Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold tracking-wide" href="#">FELIC.CO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produk">Koleksi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#keunggulan">Keunggulan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimoni">Testimoni</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- B. Hero Section -->
+    <section id="hero" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title fw-bold mb-3">Tampil Percaya Diri dengan Gaya Modern</h1>
+                    <p class="lead text-muted mb-4">Temukan koleksi pakaian wanita berkualitas premium dengan desain yang stylish, nyaman, dan trendi dari Felic.co.</p>
+                    <a href="#produk" class="btn btn-dark btn-lg rounded-pill me-2 px-4">Lihat Produk</a>
+                    <a href="https://www.instagram.com/officialfelic.co?stkn=MWFtbmo3aW84ajl3cQ==" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">Kunjungi Instagram</a>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTlM5RvrfifMjrPqPftyZeSAgBDQVn2EBnoyFBcfUQc6FRvyYWu9bPJm4&s=10" 
+         alt="off" 
+         class="img-fluid w-75 rounded-4 shadow">
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- C. Tentang Bisnis -->
+    <section id="tentang" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row justify-content-center text-center mb-4">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold">Tentang Felic.co</h2>
+                    <hr class="divider my-3 mx-auto">
+                    <p class="text-secondary">
+                        Felic.co adalah brand fashion lokal yang berfokus pada penyediaan pakaian wanita berdesain modern, elegan, dan fleksibel untuk berbagai aktivitas harian maupun acara formal. 
+                    </p>
+                    <p class="text-secondary">
+                        Kami hadir untuk memenuhi kebutuhan para wanita dewasa muda yang ingin tampil modis tanpa mengorbankan kenyamanan. Setiap helai pakaian kami diproduksi menggunakan bahan pilihan terbaik dengan pengerjaan yang teliti.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- D. Produk / Layanan -->
+    <section id="produk" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Koleksi Terpopuler</h2>
+                <hr class="divider my-3 mx-auto">
+                <p class="text-muted">Pilihan pakaian favorit pelanggan kami minggu ini</p>
+            </div>
+            <div class="row g-4">
+                <!-- Produk 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7B9dzLvlJz6ITvYMA6FMb2-BG5Ne3_jkJP23XL97i9Zr5pdNdSgqDKjdJ&s=10" class="card-img-top" alt="Casual Blouse">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Gamis Cantik</h5>
+                            <p class="card-text text-muted flex-grow-1">Dress panjang berbahan katun rayon dan brukat yang cocok digunakan untuk acara-acara tertentu. Seperti acara pernikahan dll.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fs-5 fw-bold text-dark">Rp 148.000</span>
+                                <a href="https://www.instagram.com/officialfelic.co?stkn=MWFtbmo3aW84ajl3cQ==" target="_blank" class="btn btn-dark btn-sm rounded-pill">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNI3USNIx_PJK_fGBjdz7C-rnNO2qVfcdpOdS0-UpwvhvBFp42PaRre6Q&s=10" class="card-img-top" alt="Minimalist Dress">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Atasan</h5>
+                            <p class="card-text text-muted flex-grow-1">Motif cantik bunga dengan lengan panjang kerah  yang brukat.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fs-5 fw-bold text-dark">Rp 138.000</span>
+                                <a href="https://www.instagram.com/officialfelic.co?stkn=MWFtbmo3aW84ajl3cQ==" target="_blank" class="btn btn-dark btn-sm rounded-pill">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm product-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpvSrhNW2doUbzK7nf22Gtflo-3oIHsLXvMKATeCWDI0zpge9e4f6-DthB&s=10" class="card-img-top" alt="Outerwear">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Outer Coklat</h5>
+                            <p class="card-text text-muted flex-grow-1">Outer cantik dari Brand Soedi terdapat mutiara yang menjadi aksesoris.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fs-5 fw-bold text-dark">Rp 98.000</span>
+                                <a href="https://www.instagram.com/officialfelic.co?stkn=MWFtbmo3aW84ajl3cQ==" target="_blank" class="btn btn-dark btn-sm rounded-pill">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E. Keunggulan / Value Proposition -->
+    <section id="keunggulan" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Mengapa Memilih Felic.co?</h2>
+                <hr class="divider my-3 mx-auto">
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-gem text-dark display-5 mb-3"></i>
+                        <h5 class="fw-bold">Kualitas Premium</h5>
+                        <p class="text-muted">Pemilihan bahan kain dan jahitan dikontrol secara ketat demi kenyamanan pelanggan.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-tags text-dark display-5 mb-3"></i>
+                        <h5 class="fw-bold">Harga Terjangkau</h5>
+                        <p class="text-muted">Desain mewah khas brand besar dengan patokan harga bersahabat di kantong.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-truck text-dark display-5 mb-3"></i>
+                        <h5 class="fw-bold">Pengiriman Cepat</h5>
+                        <p class="text-muted">Orderan dikemas aman dan dikirim secara cepat pada hari yang sama.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- F. Testimoni -->
+    <section id="testimoni" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Kata Pelanggan Kami</h2>
+                <hr class="divider my-3 mx-auto">
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="card border-0 shadow-sm p-3 h-100 testimonial-card">
+                        <div class="card-body">
+                            <p class="card-text text-muted mb-4">"Bajunya realpict banget! Bahannya jatuh dan pas dipakai tidak bikin panas. Pengiriman dari Madiun juga tergolong cepat."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar me-3">S</div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">TARA WE</h6>
+                                    <small class="text-muted">Pembeli Terverifikasi</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card border-0 shadow-sm p-3 h-100 testimonial-card">
+                        <div class="card-body">
+                            <p class="card-text text-muted mb-4">"Beli outer Linen Felic.co buat dipakai kuliah dan nongkrong. Jahitannya rapi banget, worth the price!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar me-3">D</div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Diana Putri</h6>
+                                    <small class="text-muted">Pembeli Terverifikasi</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- G. Contact / Form -->
+    <section id="kontak" class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3">Hubungi Kami</h2>
+                    <p class="text-muted mb-4">Punya pertanyaan seputar ukuran, stok, atau pemesanan grosir? Silahkan hubungi tim Felic.co.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-instagram fs-4 text-dark me-3"></i>
+                            <a href="https://www.instagram.com/officialfelic.co?stkn=MWFtbmo3aW84ajl3cQ==" target="_blank" class="text-decoration-none text-dark">@officialfelic.co</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-whatsapp fs-4 text-dark me-3"></i>
+                            <span>0878 3491 2535</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-envelope fs-4 text-dark me-3"></i>
+                            <span>officialfelic.co</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="bi bi-geo-alt fs-4 text-dark me-3"></i>
+                            <span>Ungaran Timur, Ruko Amaya, Kab. Semarang</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 rounded-3 shadow-sm">
+                        <h5 class="fw-bold mb-3">Kirim Pesan</h5>
+                        <form onsubmit="event.preventDefault(); alert('Pesan berhasil terkirim (Demo Only)');">
+                            <div class="mb-3">
+                                <label class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email / WhatsApp</label>
+                                <input type="text" class="form-control" placeholder="Kontak yang dapat dihubungi" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Pesan</label>
+                                <textarea class="form-control" rows="3" placeholder="Tuliskan pertanyaan Anda..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100 rounded-pill">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- H. Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <h4 class="fw-bold mb-3">FELIC.CO</h4>
+            <div class="mb-3">
+                <a href="https://www.instagram.com/officialfelic.co?stkn=MWFtbmo3aW84ajl3cQ==" target="_blank" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-3 fs-5"><i class="bi bi-whatsapp"></i></a>
+                <a href="#" class="text-white fs-5"><i class="bi bi-envelope"></i></a>
+            </div>
+            <p class="small text-muted mb-0">&copy; 2026 Felic.co. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
